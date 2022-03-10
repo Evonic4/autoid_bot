@@ -8,16 +8,16 @@
 #4-seconds between api telegram checks   
 #5-chat_id for start message   
 3. start docker-compose:  
-
-version: "3.8"  
-  
 services:  
   autoid_bot:  
     image: evonic/autoid_bot  
     volumes:  
       - ./settings.conf:/usr/share/autoid_bot/settings.conf  
    
-   
+or docker  
+docker run -v /opt/autoid_bot/settings.conf:/usr/share/autoid_bot/settings.conf evonic/autoid_bot  
+  
+  
 send /myid and get user_id in response  
 send /id and get chat_id in response  
   
